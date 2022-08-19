@@ -20,7 +20,7 @@ export default function useAuth(code) {
         window.history.pushState({}, null, "/");
       })
       .catch(() => {
-        window.location = "/";
+        //window.location = "/";
       });
   }, [code]);
 
@@ -34,7 +34,7 @@ export default function useAuth(code) {
         setExpiresIn(res.data.expiresIn);
       })
       .catch(() => {
-        window.location = "/";
+        //window.location = "/";
       });
   }, [refreshToken, expiresIn])
 
