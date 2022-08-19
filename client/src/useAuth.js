@@ -38,6 +38,5 @@ export default function useAuth(code) {
       });
   }, [refreshToken, expiresIn])
 
-
   return accessToken;
 }
