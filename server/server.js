@@ -2,11 +2,9 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const SpotifyWebApi = require("spotify-web-api-node");
-
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
-
 app.post("/refresh", (req, res) => {
   const refreshToken = req.body.refreshToken;
   const spotifyApi = new SpotifyWebApi({
@@ -15,7 +13,6 @@ app.post("/refresh", (req, res) => {
     clientSecret: "93905a15f2f44552862e8d57dcf294b3",
     refreshToken,
   });
-
   spotifyApi
     .refreshAccessToken()
     .then((data) => {
@@ -29,7 +26,6 @@ app.post("/refresh", (req, res) => {
       res.sendStatus(400);
     });
 });
-
 app.post("/login", (req, res) => {
   const code = req.body.code;
   const spotifyApi = new SpotifyWebApi({
@@ -37,7 +33,6 @@ app.post("/login", (req, res) => {
     clientID: "65907f8f732941c4b784206e99c3215e",
     clientSecret: "93905a15f2f44552862e8d57dcf294b3",
   });
-
   spotifyApi
     .authorizationCodeGrant(code)
     .then((data) => {
@@ -51,5 +46,4 @@ app.post("/login", (req, res) => {
       res.sendStatus(400);
     });
 });
-
 app.listen(3001);
