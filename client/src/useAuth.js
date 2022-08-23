@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 export default function useAuth(code) {
   const [accessToken, setAccessToken] = useState();
@@ -7,21 +7,18 @@ export default function useAuth(code) {
   const [expiresIn, setExpiresIn] = useState();
 
   useEffect(() => {
-    console.log(code);
     axios
-      .post('http://localhost:3001/login', {
+      .post("http://localhost:3001/login", {
         code,
       })
       .then((res) => {
-        // console.log(res.data)
         setAccessToken(res.data.accessToken);
         setRefreshToken(res.data.refreshToken);
         setExpiresIn(res.data.expiresIn);
-        window.history.pushState({}, null, '/');
+        window.history.pushState({}, null, "/");
       })
-      .catch((err) => {
-        console.log(err);
-        // window.location = '/';
+      .catch(() => {
+        // window.location = "/";
       });
   }, [code]);
 
@@ -29,17 +26,15 @@ export default function useAuth(code) {
     if (!refreshToken || !expiresIn) return;
     const interval = setInterval(() => {
       axios
-        .post('http://localhost:3001/refresh', {
+        .post("http://localhost:3001/refresh", {
           refreshToken,
         })
         .then((res) => {
-          console.log(res.data);
           setAccessToken(res.data.accessToken);
           setExpiresIn(res.data.expiresIn);
         })
-        .catch((err) => {
-          console.log(err);
-          window.location = '/';
+        .catch(() => {
+          // window.location = "/";
         });
     }, (expiresIn - 60) * 1000);
 
