@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "build",
+    "strict": true,
+    "esModuleInterop": true
+  },
+  "exclude": ["./__*/**/*.ts"]
+}
