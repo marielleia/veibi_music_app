@@ -1,8 +1,11 @@
-import app from './App'
+import http from 'http';
+import app from './App';
 
-const PORT = process.env.PORT || 3000;
+const server = http.createServer(app);
 
-app.listen(PORT, ()=> {
+const PORT = process.env.PORT || 3001;
+
+server.listen(PORT, ()=> {
   console.log(`🚀 Server ready at http://localhost:${PORT}`);
 });
 

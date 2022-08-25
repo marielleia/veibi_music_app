@@ -3,7 +3,7 @@ import loginModel from ".././model/LoginModel";
 
 const LoginController = {
   login: async (req: Request, res: Response) => {
-    const code = await req.body.code;
+    const code = req.body.code;
     loginModel
       .login(code)
       .then((data: any) => {

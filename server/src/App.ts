@@ -17,5 +17,4 @@ app.use(LoginRoute);
 app.use(RefreshTokenRoute);
 app.use(LyricsRoute);
 
-
 export default app;
