@@ -5,7 +5,7 @@
   "main": "./build/Server.js",
   "scripts": {
     "devStart": "ts-node-dev ./src/Server.ts",
-    "start": "node Server.js",
+    "start": "ts-node ./src/Server.ts",
     "build": "tsc --build"
   },
   "keywords": [],
