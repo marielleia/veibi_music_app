@@ -5,7 +5,8 @@
   "main": "Server.ts",
   "scripts": {
     "devStart": "ts-node-dev ./src/Server.ts",
-    "start": "ts-node-dev ./src/Server.ts"
+    "start": "ts-node-dev ./src/Server.ts",
+    "build": "webpack --config webpack.config.js"
   },
   "keywords": [],
   "author": "",
