@@ -27,7 +27,7 @@ export default function Dashboard({ code }) {
     if (!playingTrack) return;
 
     axios
-      .get("https://better-than-spotify-mia-jv.herokuapp.com/lyrics", {
+      .get("https://veibi-music-app.herokuapp.com/lyrics", {
         params: {
           track: playingTrack.title,
           artist: playingTrack.artist,
