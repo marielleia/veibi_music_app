@@ -2,11 +2,11 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "Server.ts",
+  "main": "./build/server.js",
   "scripts": {
     "devStart": "ts-node-dev ./src/Server.ts",
     "start": "npm run build && node build/Server.js",
-    "build": "rimraf ./build && tsc"
+    "build": "tsc --build"
   },
   "keywords": [],
   "author": "",
