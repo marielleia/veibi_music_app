@@ -2,7 +2,7 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "./build/server.js",
+  "main": "./build/Server.js",
   "scripts": {
     "devStart": "ts-node-dev ./src/Server.ts",
     "start": "node server.js",
