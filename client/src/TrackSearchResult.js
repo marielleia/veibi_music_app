@@ -10,7 +10,8 @@ function TrackSearchResult({ track, chooseTrack }) {
       style={{ cursor: "pointer" }}
       onClick={handlePlay}
     >
-      <img className="track-img"
+      <img
+        className="track-img"
         src={track.albumUrl}
         alt="track"
         style={{ height: "64px", width: "64px" }}
