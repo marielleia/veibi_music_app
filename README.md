@@ -1,13 +1,12 @@
 # 🍍 VEIBI Music App
 <p>A great music and lyrics app which has been crafted for lyric lovers who love to sing along the song.</p>
-Built using Spotify API with React.js, Typescript, Node.js & Express.js
 
 ## How to quickly try it?
 
 👉 The project is hosted on Firebase: https://veibi-app.web.app/<br/>
 👉 Server on Heroku: https://dashboard.heroku.com/apps/veibi-music-app
 
-💡 To use the app you'll need a Spotify account and Log in.<br>
+💡 A Spotify account is needed to Log in and use the app.<br>
 🎜 Introduce your favorite song and press the play button.<br>
 🎜 Note: Lyrics are available for Spotify Premium users.
 
